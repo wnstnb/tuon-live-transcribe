@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Transcription Test</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
+        h1 { color: #333; }
+        h2 { margin-top: 30px; color: #555; }
+        #controls button { padding: 10px 15px; margin-right: 10px; font-size: 16px; cursor: pointer; border: none; border-radius: 5px; }
+        #recordButton { background-color: #28a745; color: white; }
+        #stopButton { background-color: #dc3545; color: white; }
+        #stopButton:disabled { background-color: #ccc; }
+        #transcriptOutput { margin-top: 10px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; background-color: #fff; min-height: 100px; white-space: pre-wrap; }
+        .status { margin-top: 15px; font-style: italic; color: #777;}
+        .error { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Live Transcription Test</h1>
+    
+    <div id="controls">
+        <button id="recordButton">Start Recording</button>
+        <button id="stopButton" disabled>Stop Recording</button>
+    </div>
+    
+    <div id="statusArea" class="status">Not connected.</div>
+
+    <h2>Transcript:</h2>
+    <div id="transcriptOutput"></div>
+
+    <script src="/static/main.js"></script>
+</body>
+</html> 

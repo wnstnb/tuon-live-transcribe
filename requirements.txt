@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+pydantic-settings
+openai>=1.14.0
+websockets # For direct WebSocket client if not using httpx's new WS support
+httpx # For making HTTP requests to OpenAI API
+# python-dotenv # If not using pydantic-settings for .env loading 

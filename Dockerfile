@@ -1,15 +1,16 @@
-FROM python:3.11-slim
+FROM node:20-slim
 
 WORKDIR /app
 
-COPY requirements.txt requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+COPY package*.json ./
+RUN npm ci --omit=dev
 
 COPY . .
 
-# Ensure the .env file is created or use build ARGs/secrets for OPENAI_API_KEY in prod
-# For local dev, Docker Compose with an env_file is often easier.
+ENV NODE_ENV=production
 
-EXPOSE 8000
+RUN npm run build
 
-CMD ["uvicorn", "tuon_live_transcribe.main:app", "--host", "0.0.0.0", "--port", "8000"] 
+EXPOSE 3000
+
+CMD ["npm", "start"] 

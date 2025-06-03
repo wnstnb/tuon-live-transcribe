@@ -1,0 +1,30 @@
+{
+  "name": "tuon-live-transcribe-next",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^9.0.2",
+    "next": "^14.2.3",
+    "openai": "^4.27.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ws": "^8.15.1"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/node": "^20.11.30",
+    "@types/react": "^18.2.49",
+    "@types/react-dom": "^18.2.17",
+    "@types/ws": "^8.5.8",
+    "typescript": "5.8.3"
+  }
+}
